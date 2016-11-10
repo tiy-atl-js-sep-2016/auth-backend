@@ -28,8 +28,15 @@ class UserController {
     } catch (e) {
       response.status(401).json({ error: "No such user or password" })
     }
-
   }
+
+  * auth_test (request, response) {
+    let user = request.authUser
+
+    console.log(request.authUser)
+    response.json(user)
+  }
+
 }
 
 module.exports = UserController
