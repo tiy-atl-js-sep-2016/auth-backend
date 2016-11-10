@@ -1,6 +1,7 @@
 'use strict'
 
 const Lucid = use('Lucid')
+const Token = use('App/Model/Token')
 
 class User extends Lucid {
 
@@ -9,7 +10,7 @@ class User extends Lucid {
   }
 
   apiTokens () {
-    return this.hasMany('App/Model/Token')
+    return this.hasMany(Token)
   }
 
 }
