@@ -2,6 +2,7 @@
 
 const Lucid = use('Lucid')
 const Token = use('App/Model/Token')
+const Order = use('App/Model/Order')
 
 class User extends Lucid {
 
@@ -11,6 +12,10 @@ class User extends Lucid {
 
   apiTokens () {
     return this.hasMany(Token)
+  }
+
+  orders () {
+    return this.hasMany(Order)
   }
 
 }
