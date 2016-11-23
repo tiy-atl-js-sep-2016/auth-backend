@@ -22,3 +22,7 @@ Route.on('/').render('welcome')
 Route.post('/users', 'UserController.register')
 Route.post('/login', 'UserController.login')
 Route.get('/auth_test', 'UserController.auth_test').middleware('auth')
+
+Route.get('/products', 'ProductsController.index')
+Route.post('/products', 'ProductsController.create').middleware('auth')
+
