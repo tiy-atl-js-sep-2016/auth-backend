@@ -5,13 +5,13 @@ const Schema = use('Schema')
 class UserAdminColumnTableSchema extends Schema {
 
   up () {
-    this.table('user_admin_column', (table) => {
+    this.table('users', (table) => {
       table.boolean('admin').default(false)
     })
   }
 
   down () {
-    this.table('user_admin_column', (table) => {
+    this.table('users', (table) => {
       table.dropColumn('admin')
     })
   }
